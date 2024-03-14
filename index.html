@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Qual o maior produtor de lixo eletrônico do mundo?</p>
+    <select id="questao1">
+        <option selected>escolha a alternativa</option>
+        <option value="1">Estados Unidos</option>
+        <option value="2">Brasil</option>
+        <option value="3">India</option>
+        <option value="4">China</option>
+    </select>
+    <p>Qual estado é o maior produtor de lixo eletrônico no Brasil?</p>
+    <select id="questao2">
+        <option selected>escolha a alternativa</option>
+        <option value="1">Rio de Janeiro</option>
+        <option value="2">São Paulo</option>
+        <option value="3">Mato Grosso</option>
+        <option value="4">Bahia</option>
+    </select>
+    <p>Qual a quantidade de lixo eletrônico produzida no mundo?</p>
+    <select id="questao3">
+        <option selected>escolha a alternativa</option>
+        <option value="1">17,2 milhões de toneladas</option>
+        <option value="2">84,9 milhões de toneladas</option>
+        <option value="3">53,6 milhões de toneladas</option>
+        <option value="4">32,8 milhões de toneladas</option>
+    </select>
+</body>
+
+</html>
+<p>O Brasil está em que posição do ranking de produtores de lixo eletrônico?</p>
+<select id="questao4">
+    <option selected>escolha a alternativa</option>
+    <option value="1">primeiro</option>
+    <option value="2">segundo</option>
+    <option value="3">terceiro</option>
+    <option value="4">quarto</option>
+</select>
+<button id="botao">calcular</button>
+<div id="resultado"></div>
+<script>
+
+    let q1 = document.getElementById('questao1');
+    let q2 = document.getElementById('questao2');
+    let q3 = document.getElementById('questao3');
+    let q4 = document.getElementById('questao4');
+    let botao = document.getElementById('botao');
+    let resultado = document.getElementById('resultado');
+
+    function verificar() {
+        console.log('Executando teste');
+        let contador = 0;
+
+        if (q1.value == '1') 
+            contador++;
+        
+
+        if (q2.value == '2') 
+            contador++;
+        
+        if (q3.value == '3') 
+            contador++;
+        
+        if (q4.value == '4') 
+            contador++;
+        
+
+        resultado.innerHTML = `<h1>Você acertou ${contador} questões</h1>`
+    }
+
+    botao.addEventListener('click', verificar, false);
+
+</script>
